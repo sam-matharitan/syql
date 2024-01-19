@@ -1,0 +1,4 @@
+MODEL TOP 5 OUT OF 100000 BATCH 1000
+  y = &a(1, (1/&a(1,x))^10)/x
+DATA FILE "D:\Data\1\test4.csv" (x,y)
+DESC a AS BINARY

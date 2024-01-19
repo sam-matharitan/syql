@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6F0AC419-C5DD-4DDA-A0BB-3D7C021AC5A3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SymbQLCSharp</RootNamespace>
+    <AssemblyName>SymbQLCSharp</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MathNet.Numerics, Version=4.9.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MathNet.Numerics.4.9.0\lib\net461\MathNet.Numerics.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddSubManySymbol.cs" />
+    <Compile Include="AddSymbol.cs" />
+    <Compile Include="ArraySymbol.cs" />
+    <Compile Include="BarrierModel.cs" />
+    <Compile Include="BinarySymbol.cs" />
+    <Compile Include="ChooseParameters.cs" />
+    <Compile Include="ConstSymbol.cs" />
+    <Compile Include="CosSymbol.cs" />
+    <Compile Include="DataContext.cs" />
+    <Compile Include="DataFileContext.cs" />
+    <Compile Include="DataRawContext.cs" />
+    <Compile Include="DivSymbol.cs" />
+    <Compile Include="dummy.cs" />
+    <Compile Include="ExpSymbol.cs" />
+    <Compile Include="LinearModel.cs" />
+    <Compile Include="LogSymbol.cs" />
+    <Compile Include="MinusSymbol.cs" />
+    <Compile Include="Model.cs" />
+    <Compile Include="ModelEvaluation.cs" />
+    <Compile Include="MultDivManySymbol.cs" />
+    <Compile Include="MultSymbol.cs" />
+    <Compile Include="NegSymbol.cs" />
+    <Compile Include="OnUpdateEventArgs.cs" />
+    <Compile Include="PowSymbol.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PureModel.cs" />
+    <Compile Include="RNG.cs" />
+    <Compile Include="SignSymbol.cs" />
+    <Compile Include="SimpleScriptReader.cs" />
+    <Compile Include="SinSymbol.cs" />
+    <Compile Include="SoftmaxModel.cs" />
+    <Compile Include="ArgmaxSoftmaxSymbol.cs" />
+    <Compile Include="SqrtSymbol.cs" />
+    <Compile Include="SquareSymbol.cs" />
+    <Compile Include="Symbol.cs" />
+    <Compile Include="TestWorker.cs" />
+    <Compile Include="UnarySymbol.cs" />
+    <Compile Include="VarSymbol.cs" />
+    <Compile Include="Worker.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
